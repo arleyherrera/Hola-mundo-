@@ -1,4 +1,6 @@
-string[] frutas = new string[3];
+using System.ComponentModel;
+
+/*string[] frutas = new string[3];
             frutas[0] = "Manzana";
             frutas[1] = "Banana";
             frutas[2] = "Cereza";
@@ -32,3 +34,14 @@ foreach (string fruta in frutas)
             {
                 Console.WriteLine("Diccionario: " + fruta.Key + " - " + fruta.Value);
             }
+
+
+
+            int cuadrado (int numero)
+             {   
+                
+                 return numero + numero;
+             }
+         
+             Console.Write(cuadrado(5));
+*/

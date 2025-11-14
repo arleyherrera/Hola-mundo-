@@ -4,8 +4,10 @@ namespace MiPrimerPrograma
 {
     class Program 
     {
+        
         static void Main(string[] args) 
         {
+            /*
             Console.WriteLine("Como te llamas");
             string nombre = Console.ReadLine();
             
@@ -52,22 +54,35 @@ namespace MiPrimerPrograma
             {
                 Console.WriteLine("Los numeros son iguales");
             }
-            
+
+          
+            Funciones funciones = new Funciones();
+
+            int mayorNumero = funciones.mayor(25, 18);
+            Console.WriteLine("\nEl mayor es: " + mayorNumero);
+
+            double precioOriginal = 100;
+            double precioConAumento = funciones.aumentoDiezPorciento(precioOriginal);
+            Console.WriteLine("Precio original: " + precioOriginal);
+            Console.WriteLine("Precio con aumento del 10%: " + precioConAumento);
+
+            Console.ReadKey();
+            */
+
+            Funciones funciones = new Funciones();
+            Producto producto1 = new Producto("PC", 1500.50m, 10);
+            Producto producto2 = new Producto("Mouse", 25.99m, 50);
+
+            producto1.MostrarInfo();
+            producto2.MostrarInfo();
+
             Console.ReadKey();
         }
+
         
-        static int LeerNumero()
-        {
-            int numero;
-            string entrada = Console.ReadLine();
-            
-            while (!int.TryParse(entrada, out numero))
-            {
-                Console.WriteLine("Eso no es un numero, intenta otra vez");
-                entrada = Console.ReadLine();
-            }
-            
-            return numero;
-        }
+
     }
+    
+
+
 }
