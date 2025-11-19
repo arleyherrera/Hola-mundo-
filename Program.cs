@@ -2,86 +2,76 @@
 
 namespace MiPrimerPrograma
 {
-    class Program 
+    class Program
+{
+    static void Main()
     {
+        Console.WriteLine("=== SISTEMA DE GESTIÓN ===\n");
         
-        static void Main(string[] args) 
+       
+        Console.WriteLine("--- CLIENTES ---");
+        Cliente cliente1 = new Cliente("Juan Pérez", "juan@email.com", "999888777");
+        Cliente cliente2 = new Cliente("María López", "maria@email.com", "888777666");
+        
+        cliente1.MostrarInfo();
+        cliente2.MostrarInfo();
+        Console.WriteLine();
+        
+     
+        Console.WriteLine("--- EMPLEADOS ---");
+        Empleado empleado1 = new Empleado("Carlos Ruiz", "Gerente", 3500.00);
+        Empleado empleado2 = new Empleado("Ana Torres", "Desarrolladora", 2800.00);
+        
+        empleado1.MostrarInfo();
+        empleado2.MostrarInfo();
+        Console.WriteLine();
+        
+   
+        Console.WriteLine("--- CÁLCULO DE BONOS ---");
+        empleado1.CalcularBono(15);
+        Console.WriteLine();
+        empleado2.CalcularBono(10);
+        Console.WriteLine();
+
+        Console.WriteLine("--- LISTA DE PRODUCTOS ---");
+        
+ 
+        List<Producto> productos = new List<Producto>();
+        
+    
+        productos.Add(new Producto("Laptop", 1500.50m, 10));
+        productos.Add(new Producto("Mouse", 25.99m, 50));
+        productos.Add(new Producto("Teclado", 89.99m, 25));
+        productos.Add(new Producto("Monitor", 350.00m, 8));
+        productos.Add(new Producto("Audífonos", 45.00m, 30));
+        
+      
+        Console.WriteLine("Inventario completo:");
+        foreach (Producto producto in productos)
         {
-            /*
-            Console.WriteLine("Como te llamas");
-            string nombre = Console.ReadLine();
-            
-            while (string.IsNullOrWhiteSpace(nombre))
-            {
-                Console.WriteLine("Escribe tu nombre:");
-                nombre = Console.ReadLine();
-            }
-            
-            DateTime hoy = DateTime.Now;
-            
-            Console.WriteLine("Hola " + nombre + ", bienvenido a C#");
-            Console.WriteLine("Hoy es " + hoy.ToString("dd/MM/yyyy"));
-            
-            Console.WriteLine("\nIngresa el primer numero");
-            int num1 = LeerNumero();
-            
-            Console.WriteLine("Ingresa el segundo numero");
-            int num2 = LeerNumero();
-            
-            int suma = num1 + num2;
-            int resta = num1 - num2;
-            int multiplicacion = num1 * num2;
-            
-            Console.WriteLine("La suma es: " + suma);
-            Console.WriteLine("La resta es: " + resta);
-            Console.WriteLine("La multiplicacion es: " + multiplicacion);
-            
-            if (num2 != 0)
-            {
-                double division = (double)num1 / num2;
-                Console.WriteLine("La division es: " + division);
-            }
-            
-            if (num1 > num2)
-            {
-                Console.WriteLine("El primer numero es mayor");
-            }
-            else if (num2 > num1)
-            {
-                Console.WriteLine("El segundo numero es mayor");
-            }
-            else
-            {
-                Console.WriteLine("Los numeros son iguales");
-            }
-
-          
-            Funciones funciones = new Funciones();
-
-            int mayorNumero = funciones.mayor(25, 18);
-            Console.WriteLine("\nEl mayor es: " + mayorNumero);
-
-            double precioOriginal = 100;
-            double precioConAumento = funciones.aumentoDiezPorciento(precioOriginal);
-            Console.WriteLine("Precio original: " + precioOriginal);
-            Console.WriteLine("Precio con aumento del 10%: " + precioConAumento);
-
-            Console.ReadKey();
-            */
-
-            Funciones funciones = new Funciones();
-            Producto producto1 = new Producto("PC", 1500.50m, 10);
-            Producto producto2 = new Producto("Mouse", 25.99m, 50);
-
-            producto1.MostrarInfo();
-            producto2.MostrarInfo();
-
-            Console.ReadKey();
+            producto.MostrarInfo();
         }
-
+        Console.WriteLine();
         
-
+     
+        Console.WriteLine("--- ACTUALIZACIÓN DE STOCK ---");
+        
+      
+        productos[0].ActualizarStock(5);
+        
+    
+        productos[1].ActualizarStock(-10);
+        
+        Console.WriteLine();
+        
+       
+        Console.WriteLine("Inventario después de actualizar:");
+        foreach (Producto producto in productos)
+        {
+            producto.MostrarInfo();
+        }
     }
+}
     
 
 
