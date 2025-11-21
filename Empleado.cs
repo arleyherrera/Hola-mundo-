@@ -20,13 +20,13 @@ class Empleado
         double sueldoTotal = Sueldo + bono;
         
         Console.WriteLine("Empleado: " + Nombre);
-        Console.WriteLine("Sueldo base: $" + Sueldo);
-        Console.WriteLine("Bono (" + porcentaje + "%): $" + bono);
-        Console.WriteLine("Sueldo total: $" + sueldoTotal);
+        Console.WriteLine("Sueldo base: S/." + Sueldo);
+        Console.WriteLine("Bono (" + porcentaje + "%): S/." + bono);
+        Console.WriteLine("Sueldo total: S/." + sueldoTotal);
     }
     
 
-    public void MostrarInfo()
+    public virtual void MostrarInfo()
     {
         Console.WriteLine("Empleado: " + Nombre + ", Cargo: " + Cargo + ", Sueldo: $" + Sueldo);
     }

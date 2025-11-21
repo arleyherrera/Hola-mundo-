@@ -16,7 +16,7 @@ class Producto
  
     public void MostrarInfo()
     {
-        Console.WriteLine("Producto: " + Nombre + ", Precio: $" + Precio + ", Stock: " + Stock);
+        Console.WriteLine("Producto: " + Nombre + ", Precio: S/." + Precio + ", Stock: " + Stock);
     }
     
 
